@@ -6,53 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <title>Eren — Modern Web & TypeScript Geliştirici</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <title>eren.dev</title>
   </head>
   <body>
-    <main>
-      <section id="hero" class="hero">
-        <h1 class="hero__title" data-animate="fade-up" data-hero>Eren</h1>
-        <p class="hero__subtitle" data-animate="fade-up" data-hero>Modern Web & TypeScript Geliştirici</p>
-        <a href="#about" class="hero__scroll" data-animate="fade-up" data-hero aria-label="Keşfet">
-          <span class="hero__scroll-text">Keşfet</span>
-          <span class="hero__scroll-arrow"></span>
-        </a>
-      </section>
+    <header class="header">
+      <div class="header__spinner" aria-hidden="true"></div>
+      <a href="/" class="header__brand">eren.dev</a>
+      <button class="header__menu" aria-label="Menü" aria-expanded="false" data-menu-trigger>
+        <span class="header__menu-text">menu</span>
+      </button>
+      <nav class="header__nav" data-menu hidden>
+        <a href="#life" class="header__nav-link">Life</a>
+        <a href="#articles" class="header__nav-link">Articles</a>
+        <a href="#skills" class="header__nav-link">Yetenekler</a>
+      </nav>
+    </header>
 
-      <section id="about" class="about">
-        <p class="about__vision" data-animate="fade-up">
-          16 yaşındayım, kod yazıyorum ve dijital dünyada estetikle performansı birleştiriyorum.
-        </p>
-      </section>
-
-      <section id="works" class="works">
-        <h2 class="works__title" data-animate="fade-up">Projeler</h2>
-        <div class="works__grid">
-          <article class="works__card" data-animate="slide-right">
-            <h3 class="works__card-title">e-cenaze</h3>
-            <p class="works__card-desc">Modern ve yenilikçi bir veri yönetim sistemi.</p>
-            <div class="works__card-tags">
-              <span class="works__tag">TypeScript</span>
-              <span class="works__tag">Firebase</span>
-            </div>
-          </article>
-          <article class="works__card" data-animate="slide-left">
-            <h3 class="works__card-title">Premium İşletme Paneli</h3>
-            <p class="works__card-desc">Demo proje — kurumsal dashboard konsepti.</p>
-            <div class="works__card-tags">
-              <span class="works__tag">TypeScript</span>
-              <span class="works__tag">Vite</span>
-            </div>
-          </article>
+    <main class="main">
+      <section class="section" id="life">
+        <h2 class="section__label">Life</h2>
+        <div class="life__content">
+          <h1 class="life__title">Merhaba, ben Eren.</h1>
+          <p class="life__desc">16 yaşındayım. Modern web çözümleri, mobil uygulamalar ve sistem altyapıları geliştiriyorum.</p>
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <h2 class="contact__title" data-animate="fade-up">Birlikte harika bir şey inşa edelim</h2>
-        <a href="mailto:eren@example.com" class="contact__btn" data-animate="fade-up">E-posta Gönder</a>
+      <section class="section" id="articles">
+        <h2 class="section__label">Articles</h2>
+        <article class="article article--featured">
+          <h3 class="article__title">e-cenaze</h3>
+          <p class="article__desc">Modern veri yönetim sistemi. Ekip çalışması, Git versiyon kontrolü ve Firebase mimarisi içerir.</p>
+          <div class="article__tags">
+            <span class="article__tag">TypeScript</span>
+            <span class="article__tag">Firebase</span>
+          </div>
+        </article>
+        <div class="articles__other">
+          <h3 class="section__sublabel">Diğer Denemelerim</h3>
+          <ul class="other__list">
+            <li class="other__item"><span class="other__name">Dashboard konsepti</span><span class="other__tech">Vite, TS</span></li>
+            <li class="other__item"><span class="other__name">API entegrasyonu</span><span class="other__tech">Firebase</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2 class="section__label">Yetenekler</h2>
+        <ul class="skills__list">
+          <li class="skills__item"><span class="skills__logo">Dart</span></li>
+          <li class="skills__item"><span class="skills__logo">Flutter</span></li>
+          <li class="skills__item"><span class="skills__logo">TypeScript</span></li>
+          <li class="skills__item"><span class="skills__logo">Firebase</span></li>
+        </ul>
       </section>
     </main>
+
+    <footer class="footer">
+      <nav class="footer__links">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer__link" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer__link" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:eren@example.com" class="footer__link" aria-label="E-posta">E-posta</a>
+      </nav>
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
