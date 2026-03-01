@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>Eren — Modern Web & TypeScript Geliştirici</title>
+  </head>
+  <body>
+    <main>
+      <section id="hero" class="hero">
+        <h1 class="hero__title" data-animate="fade-up" data-hero>Eren</h1>
+        <p class="hero__subtitle" data-animate="fade-up" data-hero>Modern Web & TypeScript Geliştirici</p>
+        <a href="#about" class="hero__scroll" data-animate="fade-up" data-hero aria-label="Keşfet">
+          <span class="hero__scroll-text">Keşfet</span>
+          <span class="hero__scroll-arrow"></span>
+        </a>
+      </section>
+
+      <section id="about" class="about">
+        <p class="about__vision" data-animate="fade-up">
+          16 yaşındayım, kod yazıyorum ve dijital dünyada estetikle performansı birleştiriyorum.
+        </p>
+      </section>
+
+      <section id="works" class="works">
+        <h2 class="works__title" data-animate="fade-up">Projeler</h2>
+        <div class="works__grid">
+          <article class="works__card" data-animate="slide-right">
+            <h3 class="works__card-title">e-cenaze</h3>
+            <p class="works__card-desc">Modern ve yenilikçi bir veri yönetim sistemi.</p>
+            <div class="works__card-tags">
+              <span class="works__tag">TypeScript</span>
+              <span class="works__tag">Firebase</span>
+            </div>
+          </article>
+          <article class="works__card" data-animate="slide-left">
+            <h3 class="works__card-title">Premium İşletme Paneli</h3>
+            <p class="works__card-desc">Demo proje — kurumsal dashboard konsepti.</p>
+            <div class="works__card-tags">
+              <span class="works__tag">TypeScript</span>
+              <span class="works__tag">Vite</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 class="contact__title" data-animate="fade-up">Birlikte harika bir şey inşa edelim</h2>
+        <a href="mailto:eren@example.com" class="contact__btn" data-animate="fade-up">E-posta Gönder</a>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
