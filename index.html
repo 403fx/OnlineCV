@@ -4,72 +4,132 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <title>eren.dev</title>
+    <title>Eren | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <div class="header__spinner" aria-hidden="true"></div>
-      <a href="/" class="header__brand">eren.dev</a>
-      <button class="header__menu" aria-label="Menü" aria-expanded="false" data-menu-trigger>
-        <span class="header__menu-text">menu</span>
-      </button>
-      <nav class="header__nav" data-menu hidden>
-        <a href="#life" class="header__nav-link">Life</a>
-        <a href="#articles" class="header__nav-link">Articles</a>
-        <a href="#skills" class="header__nav-link">Yetenekler</a>
-      </nav>
-    </header>
+    <div id="app">
+      <!-- Loader -->
+      <div class="loader" id="loader">
+        <div class="spinner"></div>
+      </div>
 
-    <main class="main">
-      <section class="section" id="life">
-        <h2 class="section__label">Life</h2>
-        <div class="life__content">
-          <h1 class="life__title">Merhaba, ben Eren.</h1>
-          <p class="life__desc">16 yaşındayım. Modern web çözümleri, mobil uygulamalar ve sistem altyapıları geliştiriyorum.</p>
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="#" class="logo">eren.dev</a>
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Hero -->
+      <header class="hero">
+        <h1 class="hero-title">
+          <span class="greeting">Hey, I'm</span>
+          <span class="name">Eren</span>
+        </h1>
+        <p class="hero-subtitle">Developer · Builder · Creator</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://github.com/CodeCults" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+        </div>
+      </header>
+
+      <!-- Projects -->
+      <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Auto-Summarizer</h3>
+            <p>AI-powered text summarization tool</p>
+            <span class="tech">TypeScript</span>
+            <div class="project-links">
+              <a href="https://github.com/CodeCults/Auto-Summarizer" target="_blank" rel="noopener">Code</a>
+              <a href="https://auto-summarizer.vercel.app" target="_blank" rel="noopener">Live</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>CV</h3>
+            <p>Online CV / Portfolio</p>
+            <span class="tech">TypeScript</span>
+            <div class="project-links">
+              <a href="https://github.com/CodeCults/CV" target="_blank" rel="noopener">Code</a>
+              <a href="https://ozaltindev.vercel.app" target="_blank" rel="noopener">Live</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Study-Mate</h3>
+            <p>Study companion application</p>
+            <span class="tech">JavaScript</span>
+            <div class="project-links">
+              <a href="https://github.com/CodeCults/Study-Mate" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Load-It</h3>
+            <p>Loading & utility library</p>
+            <span class="tech">TypeScript</span>
+            <div class="project-links">
+              <a href="https://github.com/CodeCults/Load-It" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Basic-Spoofer</h3>
+            <p>Discord ban bypass utility</p>
+            <span class="tech">Python</span>
+            <div class="project-links">
+              <a href="https://github.com/CodeCults/Basic-Spoofer" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>To-Do-List</h3>
+            <p>Trying to learn JS, CSS, HTML</p>
+            <span class="tech">HTML</span>
+            <div class="project-links">
+              <a href="https://github.com/CodeCults/To-Do-List" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="section" id="articles">
-        <h2 class="section__label">Articles</h2>
-        <article class="article article--featured">
-          <h3 class="article__title">e-cenaze</h3>
-          <p class="article__desc">Modern veri yönetim sistemi. Ekip çalışması, Git versiyon kontrolü ve Firebase mimarisi içerir.</p>
-          <div class="article__tags">
-            <span class="article__tag">TypeScript</span>
-            <span class="article__tag">Firebase</span>
-          </div>
-        </article>
-        <div class="articles__other">
-          <h3 class="section__sublabel">Diğer Denemelerim</h3>
-          <ul class="other__list">
-            <li class="other__item"><span class="other__name">Dashboard konsepti</span><span class="other__tech">Vite, TS</span></li>
-            <li class="other__item"><span class="other__name">API entegrasyonu</span><span class="other__tech">Firebase</span></li>
-          </ul>
+      <!-- About -->
+      <section class="about" id="about">
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+          <p>I'm Eren, a developer passionate about building things that matter. From web apps to AI tools, I enjoy exploring new technologies and turning ideas into reality.</p>
+          <p>Check out my work on <a href="https://github.com/CodeCults" target="_blank" rel="noopener">GitHub</a>.</p>
         </div>
       </section>
 
-      <section class="section" id="skills">
-        <h2 class="section__label">Yetenekler</h2>
-        <ul class="skills__list">
-          <li class="skills__item"><span class="skills__logo">Dart</span></li>
-          <li class="skills__item"><span class="skills__logo">Flutter</span></li>
-          <li class="skills__item"><span class="skills__logo">TypeScript</span></li>
-          <li class="skills__item"><span class="skills__logo">Firebase</span></li>
-        </ul>
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-links">
+          <a href="https://github.com/CodeCults" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </section>
-    </main>
 
-    <footer class="footer">
-      <nav class="footer__links">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer__link" aria-label="GitHub">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer__link" aria-label="LinkedIn">LinkedIn</a>
-        <a href="mailto:eren@example.com" class="footer__link" aria-label="E-posta">E-posta</a>
-      </nav>
-    </footer>
-
+      <!-- Footer -->
+      <footer class="footer">
+        <p>© 2026 Eren · Built with passion</p>
+      </footer>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

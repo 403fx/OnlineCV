@@ -1,10 +1,26 @@
-import "./style.css";
+import './style.css'
 
-const menuTrigger = document.querySelector("[data-menu-trigger]");
-const menu = document.querySelector("[data-menu]");
+// Loader - notfound404 style
+const loader = document.getElementById('loader')!
+const menuBtn = document.getElementById('menuBtn')!
+const mobileMenu = document.getElementById('mobileMenu')!
 
-menuTrigger?.addEventListener("click", () => {
-  const expanded = menuTrigger.getAttribute("aria-expanded") === "true";
-  menuTrigger.setAttribute("aria-expanded", String(!expanded));
-  menu?.toggleAttribute("hidden", expanded);
-});
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loader.classList.add('hidden')
+  }, 600)
+})
+
+// Mobile menu toggle
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open')
+  menuBtn.classList.toggle('active')
+})
+
+// Close mobile menu on link click
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open')
+    menuBtn.classList.remove('active')
+  })
+})
