@@ -1,6 +1,43 @@
 import './style.css'
 import { getStoredLang, setStoredLang, applyTranslations, type Lang } from './i18n'
 
+// Custom cursor - only on devices with mouse
+const cursorTrail = document.getElementById('cursorTrail')!
+const dot = cursorTrail.querySelector('.cursor-dot--main') as HTMLElement
+
+let mouseX = 0
+let mouseY = 0
+let cursorX = 0
+let cursorY = 0
+let initialized = false
+
+function updateCursor() {
+  cursorX += (mouseX - cursorX) * 0.15
+  cursorY += (mouseY - cursorY) * 0.15
+  dot.style.left = cursorX + 'px'
+  dot.style.top = cursorY + 'px'
+  requestAnimationFrame(updateCursor)
+}
+
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  document.addEventListener('mousemove', (e) => {
+    if (!initialized) {
+      cursorX = e.clientX
+      cursorY = e.clientY
+      initialized = true
+    }
+    mouseX = e.clientX
+    mouseY = e.clientY
+  })
+  requestAnimationFrame(updateCursor)
+
+  const hoverTargets = 'a, button, .project-card, .currently-working-card, .hero-btn'
+  document.querySelectorAll(hoverTargets).forEach((el) => {
+    el.addEventListener('mouseenter', () => cursorTrail.classList.add('hover'))
+    el.addEventListener('mouseleave', () => cursorTrail.classList.remove('hover'))
+  })
+}
+
 // Loader - notfound404 style
 const loader = document.getElementById('loader')!
 const menuBtn = document.getElementById('menuBtn')!

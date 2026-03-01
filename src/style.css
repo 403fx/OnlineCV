@@ -34,6 +34,57 @@ body {
   overflow-x: hidden;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  .lang-btn,
+  .hero-btn,
+  .project-card,
+  .currently-working-card {
+    cursor: none;
+  }
+}
+
+/* Trail cursor - only on devices with precise pointer */
+.cursor-trail {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-trail {
+    display: block;
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cursor-dot--main {
+  width: 12px;
+  height: 12px;
+  background: var(--electric-blue);
+  box-shadow: 0 0 12px var(--electric-blue-glow);
+}
+
+.cursor-trail.hover .cursor-dot--main {
+  width: 16px;
+  height: 16px;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+
 /* Loader - notfound404 style */
 .loader {
   position: fixed;
