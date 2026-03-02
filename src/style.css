@@ -713,6 +713,39 @@ section {
   pointer-events: none;
 }
 
+/* Skills Filter Tabs */
+.skills-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.skills-filter-btn {
+  padding: 0.35rem 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid var(--anthracite-muted);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.skills-filter-btn:hover {
+  border-color: var(--electric-blue);
+  color: var(--electric-blue);
+}
+
+.skills-filter-btn.active {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: var(--electric-blue);
+  color: var(--electric-blue);
+}
+
 /* Skills / Nitelikler */
 .skills-hint {
   text-align: center;
@@ -733,6 +766,11 @@ section {
 .skill-item {
   position: relative;
   cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.skill-item.hidden {
+  display: none;
 }
 
 .skill-icon {
@@ -765,6 +803,21 @@ section {
 
 .skill-item:hover .skill-icon {
   transform: scale(1.05);
+}
+
+.skill-item--green .skill-icon {
+  border-color: rgba(34, 197, 94, 0.7);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.2);
+}
+
+.skill-item--yellow .skill-icon {
+  border-color: rgba(234, 179, 8, 0.7);
+  box-shadow: 0 0 8px rgba(234, 179, 8, 0.2);
+}
+
+.skill-item--red .skill-icon {
+  border-color: rgba(239, 68, 68, 0.7);
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.2);
 }
 
 .skill-tooltip {

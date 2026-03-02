@@ -85,97 +85,6 @@
         </div>
       </header>
 
-      <!-- Nitelikler / Skills -->
-      <section class="skills" id="skills">
-        <h2 class="section-title" data-i18n="skills.title">Nitelikler</h2>
-        <div class="skills-grid">
-          <!-- 100 -->
-          <div class="skill-item" data-skill="cursor">
-            <span class="skill-icon">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/cursor.svg" alt="Cursor" class="icon-cursor" />
-            </span>
-            <div class="skill-tooltip">
-              <h4>Cursor</h4>
-              <p data-i18n="skills.cursor.desc">Cursor AI editörünü %100 kullanabiliyorum.</p>
-              <span class="skill-level">100/100</span>
-              <span class="skill-category" data-i18n="skills.category.tool">Araç</span>
-            </div>
-          </div>
-          <!-- 90 -->
-          <div class="skill-item" data-skill="cisco">
-            <span class="skill-icon">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cisco.svg" alt="Cisco" class="icon-cisco" />
-            </span>
-            <div class="skill-tooltip">
-              <h4>Cisco</h4>
-              <p data-i18n="skills.cisco.desc">Ağ yapılandırması ve Cisco cihazları konusunda %95 seviyesinde kullanabiliyorum.</p>
-              <span class="skill-level">95/100</span>
-              <span class="skill-category" data-i18n="skills.category.network">Ağ</span>
-            </div>
-          </div>
-          <!-- 85 -->
-          <div class="skill-item" data-skill="vscode">
-            <span class="skill-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" />
-            </span>
-            <div class="skill-tooltip">
-              <h4>Visual Studio Code</h4>
-              <p data-i18n="skills.vscode.desc">VS Code editörünü etkin şekilde kullanabiliyorum.</p>
-              <span class="skill-level">100/100</span>
-              <span class="skill-category" data-i18n="skills.category.tool">Araç</span>
-            </div>
-          </div>
-          <!-- 75 -->
-          <div class="skill-item" data-skill="git">
-            <span class="skill-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
-            </span>
-            <div class="skill-tooltip">
-              <h4>Git</h4>
-              <p data-i18n="skills.git.desc">Git versiyon kontrol sistemini kullanabiliyorum.</p>
-              <span class="skill-level">100/100</span>
-              <span class="skill-category" data-i18n="skills.category.tool">Araç</span>
-            </div>
-          </div>
-          <!-- 70 -->
-          <div class="skill-item" data-skill="linux">
-            <span class="skill-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" />
-            </span>
-            <div class="skill-tooltip">
-              <h4>Linux</h4>
-              <p data-i18n="skills.linux.desc">Linux işletim sistemini kullanabiliyorum.</p>
-              <span class="skill-level">70/100</span>
-              <span class="skill-category" data-i18n="skills.category.system">Sistem</span>
-            </div>
-          </div>
-          <!-- 55 -->
-          <div class="skill-item" data-skill="html">
-            <span class="skill-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
-            </span>
-            <div class="skill-tooltip">
-              <h4>HTML</h4>
-              <p data-i18n="skills.html.desc">Temel HTML yapısını anlayabiliyorum, baktığımda yapıyı çözebiliyorum.</p>
-              <span class="skill-level">55/100</span>
-              <span class="skill-category" data-i18n="skills.category.language">Dil</span>
-            </div>
-          </div>
-          <!-- 40 -->
-          <div class="skill-item" data-skill="python">
-            <span class="skill-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
-            </span>
-            <div class="skill-tooltip">
-              <h4>Python</h4>
-              <p data-i18n="skills.python.desc">Temel seviyede Python biliyorum.</p>
-              <span class="skill-level">40/100</span>
-              <span class="skill-category" data-i18n="skills.category.language">Dil</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Currently Working On -->
       <section class="currently-working" id="currently-working">
         <h2 class="section-title section-title--small" data-i18n="currentlyWorking.title">Currently working on</h2>
@@ -253,6 +162,140 @@
             </div>
           </article>
           </div>
+      </section>
+
+      <!-- Nitelikler / Skills -->
+      <section class="skills" id="skills">
+        <h2 class="section-title" data-i18n="skills.title">Nitelikler</h2>
+        <div class="skills-filter">
+          <button class="skills-filter-btn active" data-filter="all" data-i18n="skills.filter.all">Tümü</button>
+          <button class="skills-filter-btn" data-filter="tool" data-i18n="skills.category.tool">Araç</button>
+          <button class="skills-filter-btn" data-filter="network" data-i18n="skills.category.network">Ağ</button>
+          <button class="skills-filter-btn" data-filter="language" data-i18n="skills.category.language">Dil</button>
+          <button class="skills-filter-btn" data-filter="system" data-i18n="skills.category.system">Sistem</button>
+        </div>
+        <div class="skills-grid">
+          <!-- 100 tool -->
+          <div class="skill-item" data-skill="prompt-engineering" data-category="tool">
+            <span class="skill-icon">
+              <img src="/prompt-engineering.svg" alt="Prompt Engineering" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>Prompt Engineering</h4>
+              <p data-i18n="skills.prompt.desc">Yapay zeka modellerine etkili promptlar yazabiliyorum.</p>
+              <span class="skill-level">100/100</span>
+              <span class="skill-category" data-i18n="skills.category.tool">Araç</span>
+            </div>
+          </div>
+          <!-- 100 tool -->
+          <div class="skill-item" data-skill="cursor" data-category="tool">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/cursor.svg" alt="Cursor" class="icon-cursor" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>Cursor</h4>
+              <p data-i18n="skills.cursor.desc">Cursor AI editörünü %100 kullanabiliyorum.</p>
+              <span class="skill-level">100/100</span>
+              <span class="skill-category" data-i18n="skills.category.tool">Araç</span>
+            </div>
+          </div>
+          <!-- 100 tool -->
+          <div class="skill-item" data-skill="vscode" data-category="tool">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>Visual Studio Code</h4>
+              <p data-i18n="skills.vscode.desc">VS Code editörünü etkin şekilde kullanabiliyorum.</p>
+              <span class="skill-level">100/100</span>
+              <span class="skill-category" data-i18n="skills.category.tool">Araç</span>
+            </div>
+          </div>
+          <!-- 100 tool -->
+          <div class="skill-item" data-skill="git" data-category="tool">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>Git</h4>
+              <p data-i18n="skills.git.desc">Git versiyon kontrol sistemini kullanabiliyorum.</p>
+              <span class="skill-level">100/100</span>
+              <span class="skill-category" data-i18n="skills.category.tool">Araç</span>
+            </div>
+          </div>
+          <!-- 95 network -->
+          <div class="skill-item" data-skill="cisco" data-category="network">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cisco.svg" alt="Cisco" class="icon-cisco" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>Cisco</h4>
+              <p data-i18n="skills.cisco.desc">Ağ yapılandırması ve Cisco cihazları konusunda %95 seviyesinde kullanabiliyorum.</p>
+              <span class="skill-level">95/100</span>
+              <span class="skill-category" data-i18n="skills.category.network">Ağ</span>
+            </div>
+          </div>
+          <!-- 60 network -->
+          <div class="skill-item" data-skill="nmap" data-category="network">
+            <span class="skill-icon">
+              <img src="/nmap.svg" alt="nmap" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>nmap</h4>
+              <p data-i18n="skills.nmap.desc">Temel seviyede kullanabiliyor, çıktılarını anlıyorum.</p>
+              <span class="skill-level">60/100</span>
+              <span class="skill-category" data-i18n="skills.category.network">Ağ</span>
+            </div>
+          </div>
+          <!-- 55 language -->
+          <div class="skill-item" data-skill="html" data-category="language">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>HTML</h4>
+              <p data-i18n="skills.html.desc">Temel HTML yapısını anlayabiliyorum, baktığımda yapıyı çözebiliyorum.</p>
+              <span class="skill-level">55/100</span>
+              <span class="skill-category" data-i18n="skills.category.language">Dil</span>
+            </div>
+          </div>
+          <!-- 40 language -->
+          <div class="skill-item" data-skill="python" data-category="language">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>Python</h4>
+              <p data-i18n="skills.python.desc">Temel seviyede Python biliyorum.</p>
+              <span class="skill-level">40/100</span>
+              <span class="skill-category" data-i18n="skills.category.language">Dil</span>
+            </div>
+          </div>
+          <!-- 100 system -->
+          <div class="skill-item" data-skill="macos" data-category="system">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/macos.svg" alt="macOS" class="icon-cursor" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>macOS</h4>
+              <p data-i18n="skills.macos.desc">macOS işletim sistemini aktif olarak kullanabiliyorum.</p>
+              <span class="skill-level">100/100</span>
+              <span class="skill-category" data-i18n="skills.category.system">Sistem</span>
+            </div>
+          </div>
+          <!-- 70 system -->
+          <div class="skill-item" data-skill="linux" data-category="system">
+            <span class="skill-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" />
+            </span>
+            <div class="skill-tooltip">
+              <h4>Linux</h4>
+              <p data-i18n="skills.linux.desc">Linux işletim sistemini kullanabiliyorum.</p>
+              <span class="skill-level">70/100</span>
+              <span class="skill-category" data-i18n="skills.category.system">Sistem</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Footer -->

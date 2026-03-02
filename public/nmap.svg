@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Eye outline -->
+  <path d="M4 32 C14 16, 50 16, 60 32 C50 48, 14 48, 4 32 Z" stroke="#00d4ff" stroke-width="1.8" fill="none"/>
+  <!-- Eyelid inner curve top -->
+  <path d="M10 26 C18 20, 46 20, 54 26" stroke="#00d4ff" stroke-width="0.8" opacity="0.45" fill="none"/>
+  <!-- Eyelid inner curve bottom -->
+  <path d="M10 38 C18 44, 46 44, 54 38" stroke="#00d4ff" stroke-width="0.8" opacity="0.45" fill="none"/>
+
+  <!-- Iris outer circle -->
+  <circle cx="32" cy="32" r="11" stroke="#00d4ff" stroke-width="1.4"/>
+  <!-- Iris grid horizontal lines -->
+  <line x1="21" y1="28" x2="43" y2="28" stroke="#00d4ff" stroke-width="0.6" opacity="0.5"/>
+  <line x1="21" y1="32" x2="43" y2="32" stroke="#00d4ff" stroke-width="0.6" opacity="0.5"/>
+  <line x1="21" y1="36" x2="43" y2="36" stroke="#00d4ff" stroke-width="0.6" opacity="0.5"/>
+  <!-- Iris grid vertical lines -->
+  <line x1="28" y1="21" x2="28" y2="43" stroke="#00d4ff" stroke-width="0.6" opacity="0.5"/>
+  <line x1="32" y1="21" x2="32" y2="43" stroke="#00d4ff" stroke-width="0.6" opacity="0.5"/>
+  <line x1="36" y1="21" x2="36" y2="43" stroke="#00d4ff" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- Pupil -->
+  <circle cx="32" cy="32" r="6" stroke="#00d4ff" stroke-width="1.2" fill="rgba(0,212,255,0.08)"/>
+
+  <!-- Crosshair -->
+  <line x1="32" y1="27" x2="32" y2="30" stroke="#7df9ff" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="32" y1="34" x2="32" y2="37" stroke="#7df9ff" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="27" y1="32" x2="30" y2="32" stroke="#7df9ff" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="34" y1="32" x2="37" y2="32" stroke="#7df9ff" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- Crosshair center dot -->
+  <circle cx="32" cy="32" r="1.5" fill="#7df9ff"/>
+</svg>

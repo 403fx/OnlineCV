@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Gear centered at (20, 32) -->
+  <path d="M22 17.5h-4l-1.2 4.4a14.5 14.5 0 0 0-3.6 2.1L9 22.6l-2 3.5 3.3 3a14.7 14.7 0 0 0 0 4.2l-3.3 3 2 3.5 4.2-1.4c1.1.8 2.3 1.5 3.6 2l1.2 4.6h4l1.2-4.5a14.5 14.5 0 0 0 3.6-2.1l4.2 1.4 2-3.5-3.3-3a14.7 14.7 0 0 0 0-4.2l3.3-3-2-3.5-4.2 1.4a14.5 14.5 0 0 0-3.6-2.1L22 17.5z" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Gear inner circle -->
+  <circle cx="20" cy="32" r="5" stroke="#00d4ff" stroke-width="2"/>
+  <!-- Horizontal connector -->
+  <line x1="32" y1="32" x2="40" y2="32" stroke="#00d4ff" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Branch lines -->
+  <line x1="40" y1="32" x2="48" y2="20" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="40" y1="32" x2="50" y2="32" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="40" y1="32" x2="48" y2="44" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Sub-branch lines top -->
+  <line x1="48" y1="20" x2="52" y2="15" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="48" y1="20" x2="54" y2="22" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Sub-branch lines bottom -->
+  <line x1="48" y1="44" x2="52" y2="40" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="48" y1="44" x2="52" y2="49" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Nodes -->
+  <circle cx="40" cy="32" r="2.5" fill="#00d4ff" opacity="0.9"/>
+  <circle cx="48" cy="20" r="2.5" fill="#00d4ff" opacity="0.9"/>
+  <circle cx="50" cy="32" r="2.5" fill="#00d4ff" opacity="0.9"/>
+  <circle cx="48" cy="44" r="2.5" fill="#00d4ff" opacity="0.9"/>
+  <circle cx="52" cy="15" r="1.8" fill="#7df9ff" opacity="0.7"/>
+  <circle cx="54" cy="22" r="1.8" fill="#7df9ff" opacity="0.7"/>
+  <circle cx="52" cy="40" r="1.8" fill="#7df9ff" opacity="0.7"/>
+  <circle cx="52" cy="49" r="1.8" fill="#7df9ff" opacity="0.7"/>
+</svg>

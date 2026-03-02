@@ -142,16 +142,63 @@ lightbox.addEventListener('touchend', (e) => {
   if (diff < 0 && currentPhotoIndex > 0) showPhoto(currentPhotoIndex - 1)
 }, { passive: true })
 
-// Auto-sort skills by proficiency level (highest first)
+// Category priority order for default (All) view
+const CATEGORY_PRIORITY: Record<string, number> = {
+  tool: 1,
+  network: 2,
+  language: 3,
+  system: 4,
+}
+
+// Auto-sort skills + color border
 const skillsGrid = document.querySelector('.skills-grid')
 if (skillsGrid) {
-  const items = Array.from(skillsGrid.querySelectorAll('.skill-item'))
-  items.sort((a, b) => {
-    const aLevel = parseInt(a.querySelector('.skill-level')?.textContent ?? '0')
-    const bLevel = parseInt(b.querySelector('.skill-level')?.textContent ?? '0')
-    return bLevel - aLevel
+  const items = Array.from(skillsGrid.querySelectorAll<HTMLElement>('.skill-item'))
+
+  // Assign color classes
+  items.forEach(item => {
+    const level = parseInt(item.querySelector('.skill-level')?.textContent ?? '0')
+    if (level >= 70) item.classList.add('skill-item--green')
+    else if (level >= 41) item.classList.add('skill-item--yellow')
+    else item.classList.add('skill-item--red')
   })
-  items.forEach(item => skillsGrid.appendChild(item))
+
+  function sortAndRender(filter: string) {
+    const sorted = [...items].sort((a, b) => {
+      const aCat = a.dataset.category ?? ''
+      const bCat = b.dataset.category ?? ''
+      const aLevel = parseInt(a.querySelector('.skill-level')?.textContent ?? '0')
+      const bLevel = parseInt(b.querySelector('.skill-level')?.textContent ?? '0')
+
+      if (filter === 'all') {
+        const catDiff = (CATEGORY_PRIORITY[aCat] ?? 99) - (CATEGORY_PRIORITY[bCat] ?? 99)
+        return catDiff !== 0 ? catDiff : bLevel - aLevel
+      }
+      return bLevel - aLevel
+    })
+
+    sorted.forEach(item => {
+      const cat = item.dataset.category ?? ''
+      if (filter === 'all' || cat === filter) {
+        item.classList.remove('hidden')
+      } else {
+        item.classList.add('hidden')
+      }
+      skillsGrid!.appendChild(item)
+    })
+  }
+
+  // Initial render
+  sortAndRender('all')
+
+  // Filter button logic
+  document.querySelectorAll('.skills-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.skills-filter-btn').forEach(b => b.classList.remove('active'))
+      btn.classList.add('active')
+      sortAndRender((btn as HTMLElement).dataset.filter ?? 'all')
+    })
+  })
 }
 
 // Loader - notfound404 style
